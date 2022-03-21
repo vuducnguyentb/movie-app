@@ -54,6 +54,10 @@ class MovieController extends Controller
         $movie->movie_hot = $data['movie_hot'];
         $movie->description = $data['description'];
         $movie->status = $data['status'];
+        $movie->sub = $data['sub'];
+        $movie->trailer = $data['trailer'];
+        $movie->timemovie = $data['timemovie'];
+        $movie->resolution = $data['resolution'];
         $movie->category_id = $data['category_id'];
         $movie->country_id = $data['country_id'];
         $movie->genre_id = $data['genre_id'];
@@ -116,7 +120,11 @@ class MovieController extends Controller
         $movie->slug = $data['slug'];
         $movie->movie_hot = $data['movie_hot'];
         $movie->description = $data['description'];
+        $movie->sub = $data['sub'];
+        $movie->trailer = $data['trailer'];
+        $movie->timemovie = $data['timemovie'];
         $movie->status = $data['status'];
+        $movie->resolution = $data['resolution'];
         $movie->category_id = $data['category_id'];
         $movie->country_id = $data['country_id'];
         $movie->genre_id = $data['genre_id'];

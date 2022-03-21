@@ -69,7 +69,18 @@
                     <div class="halim-item">
                         <a class="halim-thumb" href="{{route('movie',$movie->slug)}}">
                             <figure><img class="lazy img-responsive" src="{{asset('uploads/movie/'.$movie->image)}}" alt="{{$movie->title}}" title="{{$movie->title}}"></figure>
-                            <span class="status">TẬP 15</span><span class="episode"><i class="fa fa-play" aria-hidden="true"></i>Vietsub</span>
+                            <span class="status">
+                            @if($movie->resolution === 0)
+                                    HD
+                                @elseif($movie->resolution === 1)
+                                    SD
+                                @elseif($movie->resolution === 2)
+                                    HDCAM
+                                @else
+                                    CAM
+                                @endif
+                            </span>
+                            <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>Vietsub</span>
                             <div class="icon_overlay"></div>
                             <div class="halim-post-title-box">
                                 <div class="halim-post-title ">

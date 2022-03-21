@@ -44,8 +44,24 @@
                                 {!! Form::textarea('description', isset($movie)  ? $movie->description : '', ['style'=>'resize:none','class'=>'form-control','placeholder'=>'Nhập mô tả','id'=>'description']) !!}
                             </div>
                             <div class="form-group">
+                                {!! Form::label('timemovie', 'Timemovie', []) !!}
+                                {!! Form::text('timemovie', isset($movie)  ? $movie->timemovie : '', ['class'=>'form-control','placeholder'=>'Nhập vào dữ liệu']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('trailer', 'Trailer', []) !!}
+                                {!! Form::text('trailer', isset($movie)  ? $movie->trailer : '', ['class'=>'form-control','placeholder'=>'Nhập vào dữ liệu']) !!}
+                            </div>
+                            <div class="form-group">
                                 {!! Form::label('active', 'Active', []) !!}
                                 {!! Form::select('status', ['1'=>'Hiển thị','0'=>'Không'],isset($movie)  ? $movie->status : null, ['class'=>'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('sub', 'Sub', []) !!}
+                                {!! Form::select('sub', ['1'=>'Thuyết minh','0'=>'Sub'],isset($movie)  ? $movie->sub : null, ['class'=>'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('resolution', 'Resolution', []) !!}
+                                {!! Form::select('resolution', ['0'=>'HD','1'=>'SD','2'=>'HDCAM','3'=>'CAM'],isset($movie)  ? $movie->resolution : null, ['class'=>'form-control']) !!}
                             </div>
                             <div class="form-group">
                                 {!! Form::label('movie_hot', 'Phim hot', []) !!}

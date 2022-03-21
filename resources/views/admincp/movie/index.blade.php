@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container pt-2 pb-2">
+    <div class="container-fluid pt-2 pb-2">
 
             <a href="{{route('movie.create')}}" class="btn btn-primary">Thêm Phim</a>
     </div>
-    <div class="container">
+    <div class="container-fluid">
 
     <table class="table" id="tablefilm">
         <thead class="thead-light">
@@ -20,6 +20,7 @@
             <th scope="col">Genre</th>
             <th scope="col">Country</th>
             <th scope="col">Status</th>
+            <th scope="col">Chất lượng phim</th>
             <th scope="col">Phim Hot</th>
             <th scope="col">Action</th>
         </tr>
@@ -47,6 +48,17 @@
                         Hiển thị
                     @else
                         Không hiển thị
+                    @endif
+                </td>
+                <td>
+                    @if($item->resolution === 0)
+                        HD
+                    @elseif($item->resolution === 1)
+                        SD
+                    @elseif($item->resolution === 2)
+                        HDCAM
+                    @else
+                        CAM
                     @endif
                 </td>
                 <td>
